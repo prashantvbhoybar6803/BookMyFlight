@@ -5,6 +5,7 @@
     <th>To</th>
     <th>Deaparture Time</th>
     <th>Arrival Time</th>
+    <th>Price</th>
     <th>Action</th>
   </tr>
 
@@ -15,7 +16,8 @@
         <td><%= f.arrival_to %></td>
         <td><%= f.departure_time.strftime("%d %b %I:%M %P") %></td>
         <td><%= f.arrival_time.strftime("%d %b %I:%M %P") %></td>
-        <td><%=button_to "Book now" %></td>
+        <td><%= f.price%></td>
+        <td><%=button_to "Book now", "/BookTicket", method: :get %></td>
     </tr>
 <% end %>
 </table>
